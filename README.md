@@ -20,10 +20,12 @@ Problem 1:
    * 
    * Proving that the upper bound holds: c = 3, xo > 0, we always have T(xo) < 3 * O(xo).
    */
+   private static void analyseProblem1() {
    
-   double[] arr1 = new double[] {1.0, 4.5, 6.5, -1.0, -2.0, -1.5};
-   double[] arr2 = new double[] {-3.0, -2.4, -3.2, -1.0, 0, 1.0, 2.0, 3.6, 5.6, 4.5, 3.6, 1.2};
-   double[] arr3 = new double[] {-7.5, -9.4, 6.0, 100.0};
+    double[] arr1 = new double[] {1.0, 4.5, 6.5, -1.0, -2.0, -1.5};
+    double[] arr2 = new double[] {-3.0, -2.4, -3.2, -1.0, 0, 1.0, 2.0, 3.6, 5.6, 4.5, 3.6, 1.2};
+    double[] arr3 = new double[] {-7.5, -9.4, 6.0, 100.0};
+   
     // run for array 1
     /*
      * The length of the array is: 6
@@ -87,6 +89,7 @@ Problem 2:
    * @exception for mod == 0.
    */
   private static void analyseProblem2() throws Exception {
+  
     // 1st try
     /*
      * We calculate: 2^8 mod 8
@@ -121,16 +124,6 @@ Problem 2:
     pen.println(printResultProb2(13, 0, 23, Problem2.getCounter(), result));
   }
 
-  // return the report of running contain method in Problem2 in format of a String
-  private static String printResultProb2(int x, int y, int mod, int counter, int result) {
-    String str = new String();
-    str += "We calculate: " + x + "^" + y + " mod " + mod + '\n';
-    str += "The counter is: " + counter + '\n';
-    str += "The result is: " + result;
-
-    return str;
-  }
-  
 Problem 3:
 /*
    * For allPairs() method, I choose to count:
@@ -147,6 +140,7 @@ Problem 3:
    * Proving that the bound holds: for c = 10, xo > 0, We always have T(xo) < 10 * O(xo^2);
    */
   private static void analyseProblem3() {
+  
     int[] arr1 = new int[] {5, 6, 7, 3, 2};
     int[] arr2 = new int[] {2, 3, -1};
     int[] arr3 = new int[] {4};
@@ -204,8 +198,8 @@ Problem 4:
    * Strings inside input array.
    * 
    */
-
   private static void analyseProblem4() {
+  
     String[] arr1 = new String[] {"Hello", "World", "my", "name", "is", "Quang"};
     String[] arr2 = new String[] {"Hey"};
 
@@ -295,6 +289,7 @@ Problem 5:
    * complexity of this method is O(m+n).
    */
   private static void analyseProblem5() {
+  
     int[] arr1 = new int[] {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
     int[] arr2 = new int[] {11, 12, 13, 14, 15};
     int[] arr3 = new int[0];
