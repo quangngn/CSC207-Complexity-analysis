@@ -12,8 +12,7 @@ Problem 1:
    * 
    * The input of my model is the length of the array.
    * 
-   * The worst case scenario would be when there is no element in arr satisfies the Math.abs(arr[i]
-   * - d) < eps.
+   * The worst case scenario would be when there is no element in arr satisfies Math.abs(arr[i] - d) < eps.
    * 
    * The model of time complexity of this method is: T(n) = 2*n. Tight upper bound of this model is
    * O(n).
