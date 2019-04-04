@@ -20,6 +20,7 @@ Problem 1:
    * 
    * Proving that the upper bound holds: c = 3, xo > 0, we always have T(xo) < 3 * O(xo).
    */
+   
    private static void analyseProblem1() {
    
     double[] arr1 = new double[] {1.0, 4.5, 6.5, -1.0, -2.0, -1.5};
@@ -88,6 +89,7 @@ Problem 2:
    * 
    * @exception for mod == 0.
    */
+   
   private static void analyseProblem2() throws Exception {
   
     // 1st try
@@ -139,6 +141,7 @@ Problem 3:
    * 
    * Proving that the bound holds: for c = 10, xo > 0, We always have T(xo) < 10 * O(xo^2);
    */
+   
   private static void analyseProblem3() {
   
     int[] arr1 = new int[] {5, 6, 7, 3, 2};
@@ -196,8 +199,8 @@ Problem 4:
    * complexity function of concatAndReplicateAll() is: T(n*m), BUT m is now the total length of
    * Strings inside input array. The upper bound is still O(n*m) with m is now the total length of
    * Strings inside input array.
-   * 
    */
+   
   private static void analyseProblem4() {
   
     String[] arr1 = new String[] {"Hello", "World", "my", "name", "is", "Quang"};
@@ -288,6 +291,7 @@ Problem 5:
    * I did declare a new array with length = total length of the input arrays once. So the space
    * complexity of this method is O(m+n).
    */
+   
   private static void analyseProblem5() {
   
     int[] arr1 = new int[] {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
