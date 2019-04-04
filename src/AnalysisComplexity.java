@@ -5,6 +5,15 @@ public class AnalysisComplexity {
   private static PrintWriter pen = new PrintWriter(System.out, true);
 
   public static void main(String[] args) throws Exception {
+    pen.println("Problem 1: " + '\n');
+    analyseProblem1();
+    pen.println("Problem 2: " + '\n');
+    analyseProblem2();
+    pen.println("Problem 3: " + '\n');
+    analyseProblem3();
+    pen.println("Problem 4: " + '\n');
+    analyseProblem4();
+    pen.println("Problem 5: " + '\n');
     analyseProblem5();
   }
 
@@ -82,7 +91,7 @@ public class AnalysisComplexity {
    * - the number of time the method recursively call itself. Because y is a power of 2, y is almost
    * always even (except when y = 2^0 = 1)
    * 
-   * The input of the model y.
+   * The input of the model: y.
    * 
    * Solve the recurrence relation using substitution method:
    * 
