@@ -67,7 +67,7 @@ Problem 2:
    * - the number of time the method recursively call itself. Because y is a power of 2, y is almost
    * always even (except when y = 2^0 = 1)
    * 
-   * The input of the model y.
+   * The input of the model: y.
    * 
    * Solve the recurrence relation using substitution method:
    * 
@@ -287,7 +287,7 @@ Problem 5:
    * 
    * For this method, I don't use recursion so the stack has space complexity = O(1).
    * 
-   * I did declare a new array with length = total length of the input arrays once. So the space
+   * I did declare a new array with length = total length of the input arrays once. So the heap space
    * complexity of this method is O(m+n).
    */
    
@@ -336,3 +336,7 @@ Problem 5:
     result = Problem5.interLeave(arr3, arr2);
     pen.println(printResultProb5(arr2, arr3, Problem5.getCounter(), result));
   }
+  
+  From my personal observation of the relationship between time and space complexity, the space complexity cannot 
+  be larger than the time complexity. So if we know the time complexity, we can put an upper bound on the space 
+  complexity. If we know the space complexity, we can put an lower bound on the time complexity.
