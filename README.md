@@ -86,7 +86,7 @@ Problem 2:
    * Proving that the upper bound holds. We have: c = 10, xo > 2, we always have T(xo) < 10 *
    * log(xo).
    * 
-   * @exception for mod == 0.
+   * @exception for mod == 0
    */
    
   private static void analyseProblem2() throws Exception {
@@ -226,7 +226,7 @@ Problem 4:
    * 
    * T() = (n(n-1)/2) * (str0.length*m + str1.length*(m-1) + ... + lastStr.length).
    * 
-   * let's call aveLength = the average length of the Strings in the array. What I want to do is
+   * Let's call aveLength = the average length of the Strings in the array. What I want to do is
    * simplifying the Strings' length factors in the complexity function. I have no clear explanation
    * why I use aveLength. I just...feel it.
    * 
