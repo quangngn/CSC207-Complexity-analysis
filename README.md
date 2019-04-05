@@ -194,10 +194,53 @@ Problem 4:
    * 
    * T(n, m) = n*m; We have the upper bound of the complexity is O(n*m);
    * 
-   * In case Java does O(x+y) concatenation of 2 Strings with length x and y, we have the time
-   * complexity function of concatAndReplicateAll() is: T(n*m), BUT m is now the total length of
-   * Strings inside input array. The upper bound is still O(n*m) with m is now the total length of
-   * Strings inside input array.
+   * In case Java does O(x+y) concatenation of 2 Strings with length x and y, we will be in a very
+   * strange situation. The number of time we call concatenation would still be m*n, but time
+   * complexity of concatenation would be O(x + y).
+   * 
+   * For example, think about an input String array = ["abc", "de", "fghi"]; repetition = 3. We
+   * count the times each character got add to an array.
+   * 
+   * 1st concatenation "" + "abc": counter = 3, current String = "abc"
+   * 
+   * 2nd concatenation "abc" + "abc": counter = 3 + 3 = 6, current String = "abcabc".
+   * 
+   * 3rd concatenation "abcabc" + "abc": counter = 6 + 3 = 9, current String = "abcabcabc";
+   * 
+   * 4th concatenation "abcabcabc" + "de": counter = 9 + 2 = 11, current String = "abcabcabcde";
+   * 
+   * 5th concatenation "abcabcabcde" + "de": counter = 11 + 2 = 13, current String =
+   * "abcabcabcdede";
+   * 
+   * 6th concatenation ...
+   * 
+   * until current String = "abcabcabcdededefghifghifghi".
+   * 
+   * Now we analyze its time complexity:
+   * 
+   * let m = length of the input String array, n = repetition, str0 = the first String in the array,
+   * str1 = the second String in the array...so on till lastStr, which is the last String in the
+   * array:
+   * 
+   * T() = str0.length*(n(n-1)/2)*m + str1.length*(n(n-1)/2)*(m-1) + ... + lastStr.length*(n(n-1)/2)
+   * 
+   * T() = (n(n-1)/2) * (str0.length*m + str1.length*(m-1) + ... + lastStr.length).
+   * 
+   * let's call aveLength = the average length of the Strings in the array. What I want to do is
+   * simplifying the Strings' length factors in the complexity function. I have no clear explanation
+   * why I use aveLength. I just...feel it.
+   * 
+   * T() ~= (n(n-1)/2) * (aveLength*m + aveLength*(m-1) + ... aveLength)
+   * 
+   * T() ~= (n(n-1)/2) * aveLength * (m + m - 1 + ... 1)
+   * 
+   * T() ~= (n(n-1)/2) * aveLength * (m(m-1)/2).
+   * 
+   * Thus we have T depends on 3 factors: repetition n, length of the input array: m, the average
+   * length of Strings in the array: aveLength.
+   * 
+   * The bound of this complexity is O(n^2 * m^2 * aveLength).
+   * 
    */
    
   private static void analyseProblem4() {
